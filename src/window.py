@@ -23,8 +23,9 @@ class SkeletonWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'SkeletonWindow'
     Gtk.Settings.get_default().set_property("gtk-application-prefer-dark-theme", True)
 
-    label = Gtk.Template.Child()
+    sidebar = Gtk.Template.Child()
+    sidebar_reveal = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-    Adw.init()
+
