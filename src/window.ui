@@ -11,7 +11,9 @@
         <child>
           <object class="AdwHeaderBar" id="header_bar">
               <property name="title-widget">
-                <object class="GtkSearchEntry"/>
+                <object class="GtkSearchEntry">
+                  <property name="width-request">267</property>
+                </object>
               </property>
               <child type="start">
                 <object class="GtkToggleButton">

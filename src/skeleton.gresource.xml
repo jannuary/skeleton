@@ -2,5 +2,6 @@
 <gresources>
   <gresource prefix="/org/example/App">
     <file>window.ui</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/sidebar-toggle-left-symbolic.svg</file>
   </gresource>
 </gresources>
