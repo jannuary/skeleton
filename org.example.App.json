@@ -44,9 +44,19 @@
                 }
             ]
         },
-        {
-            "name": "libadwaita",
+ {
+            "name" : "libadwaita",
             "buildsystem" : "meson",
+            "config-opts" : [
+                "-Dintrospection=enabled",
+                "-Dtests=false",
+                "-Dexamples=false",
+                "-Dvapi=false"
+            ],
+            "cleanup" : [
+                "/include",
+                "/lib/pkgconfig"
+            ],
             "sources" : [
                 {
                     "type" : "git",

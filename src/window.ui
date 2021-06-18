@@ -6,6 +6,7 @@
     <property name="title" translatable="yes">Polyphony</property>
     <property name="default-width">411</property>
     <property name="default-height">823</property>
+
     <child>
       <object class="GtkBox">
         <property name="orientation">vertical</property>
@@ -30,17 +31,17 @@
             </child>
           </object>
         </child>
+
         <child>
           <object class="AdwFlap" id="sidebar">
             <property name="vexpand">True</property>
-            <property name="locked" bind-source="locked_switch" bind-property="active" bind-flags="sync-create"/>
-            <property name="modal" bind-source="modal_switch" bind-property="active" bind-flags="sync-create"/>
-            <property name="swipe-to-open" bind-source="swipe_to_open_switch" bind-property="active" bind-flags="sync-create"/>
-            <property name="swipe-to-close" bind-source="swipe_to_close_switch" bind-property="active" bind-flags="sync-create"/>
+            <property name="modal">True</property>
+            <property name="swipe-to-open">True</property>
+            <property name="swipe-to-close">True</property>
             <property name="flap">
               <object class="GtkStackSidebar">
                 <property name="stack">stack</property>
-                <property name="width-request">200</property>
+                <property name="width-request">250</property>
               </object>
             </property>
             <property name="separator">
@@ -59,9 +60,16 @@
                   <object class="GtkStackPage">
                     <property name="title" translatable="yes">Home</property>
                     <property name="child">
-                        <object class="GtkLabel">
-                          <property name="label">Home</property>
-                      </object>
+                    <object class="AdwClamp">
+                    <property name="maximum-size">900px</property>
+                    <child>
+                         <object class="AdwStatusPage">
+                                   <property name="icon-name">dialog-warning-symbolic</property>
+                                    <property name="title" translatable="yes">Under Construction</property>
+                                    <property name="description" translatable="yes">This page is not implemented yet</property>
+                         </object>
+                    </child>
+                   </object>
                     </property>
                   </object>
                 </child>
@@ -69,9 +77,11 @@
                   <object class="GtkStackPage">
                     <property name="title" translatable="yes">Explore</property>
                     <property name="child">
-                      <object class="GtkLabel">
-                          <property name="label">Explore</property>
-                      </object>
+                        <object class="AdwStatusPage">
+                                   <property name="icon-name">dialog-warning-symbolic</property>
+                                    <property name="title" translatable="yes">Under Construction</property>
+                                    <property name="description" translatable="yes">This page is not implemented yet</property>
+                         </object>
                     </property>
                   </object>
                 </child>
